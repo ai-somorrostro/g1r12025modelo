@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Data and artifacts (large files)
+*.npy
+*.pkl
+*.index
+faiss.index
+embeddings.npy
+metadata.jsonl
+chunks_normas.jsonl
+data/
+bulk-data/
+copias-seguridad-data/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+*.cache
+.pytest_cache/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Project specific
+magic-rules/magic_rules.pdf
+scrapper_log_manager.py
+scrapper.cron
+scryfall_scrapper.py
