@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 from typing import Optional
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import numpy as np
 import sys
@@ -32,12 +33,20 @@ app = FastAPI(
     version="1.0.0"
 )
 
+# Add CORS middleware to allow web interface
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 class QueryRequest(BaseModel):
     """Request model for RAG queries."""
     query: str
     topk: Optional[int] = 5
-    model: Optional[str] = "gpt-4o-mini"
 
 
 class QueryResponse(BaseModel):
@@ -45,7 +54,6 @@ class QueryResponse(BaseModel):
     query: str
     answer: str
     topk: int
-    model: str
 
 
 @app.get("/", tags=["Info"])
@@ -77,7 +85,6 @@ def query_rag(request: QueryRequest):
         - query: The question asked
         - answer: The AI-generated answer with context
         - topk: Number of context chunks used
-        - model: LLM model used
     """
     try:
         # Paths (relative to project root)
@@ -93,21 +100,20 @@ def query_rag(request: QueryRequest):
                     detail=f"Required file not found: {fpath}. Run setup pipeline first."
                 )
         
-        # Run RAG pipeline
+        # Run RAG pipeline (always use gpt-4o-mini)
         answer = rag_pipeline(
             query=request.query,
             emb_path=emb_path,
             meta_path=meta_path,
             faiss_index_path=faiss_index_path,
             topk=request.topk,
-            model=request.model
+            model="gpt-4o-mini"
         )
         
         return QueryResponse(
             query=request.query,
             answer=answer,
-            topk=request.topk,
-            model=request.model
+            topk=request.topk
         )
     
     except Exception as e:
