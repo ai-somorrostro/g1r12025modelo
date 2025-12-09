@@ -123,29 +123,91 @@ def call_openrouter(system_prompt: str, context: str, user_query: str, model: st
         else:
             return f'Error: {data}'
     except Exception as e:
-        return f'Error calling OpenRouter: {str(e)}'
+        return {
+            'answer': f'Error calling OpenRouter: {str(e)}',
+            'input_tokens': 0,
+            'output_tokens': 0
+        }
 
 
 def rag_pipeline(query: str, emb_path: str, meta_path: str, faiss_index_path: str, topk: int = 5, model: str = 'gpt-4o-mini') -> str:
     """Full RAG pipeline: retrieve context → call LLM → return answer."""
     
     # System prompt para el RAG
-    system_prompt = """Eres un experto en las reglas de Magic: The Gathering. Tu tarea es responder preguntas sobre las reglas basándote en el contexto proporcionado.
+    system_prompt = """Eres un experto en las reglas de Magic: The Gathering. Tu ÚNICA función es responder preguntas sobre Magic basándote en el contexto proporcionado.
 
-Sé preciso, conciso y siempre cita la norma o sección relevante si es posible.
-Si el contexto no proporciona la información necesaria, indica que no está disponible en los fragmentos proporcionados."""
+INSTRUCCIONES CRÍTICAS:
+1. Si la pregunta contiene palabras relacionadas con Magic (cartas, reglas, mecánicas, fases, criaturas, hechizos, habilidades, maná, etc.) → RESPONDE usando el contexto
+2. Si la pregunta es claramente sobre temas NO Magic (matemáticas, política, ciencia general, chistes, etc.) → RECHAZA
 
-    print(f'🔍 Buscando contexto para: "{query}"', file=sys.stderr)
+PALABRAS CLAVE DE MAGIC (si la pregunta tiene alguna de estas, es sobre Magic):
+- Cartas, criaturas, hechizos, instantáneo, conjuro, artefacto, encantamiento, tierra, planeswalker
+- Maná, costo, poder, resistencia, girar, apilador, pila
+- Fases del turno, combate, daño, bloqueo, atacante, defensor
+- Habilidades, efectos, reglas, normas, juego
+- Cualquier término específico de Magic: The Gathering
+
+EJEMPLOS QUE DEBES RECHAZAR:
+- "¿Cuánto es 1+1?" → Matemática pura, no es sobre Magic
+- "¿Quién es el presidente?" → Política, no es sobre Magic
+- "Cuéntame un chiste" → Entretenimiento general, no es sobre Magic
+
+REGLA DE ORO: Si dudas y la pregunta podría ser sobre Magic, RESPONDE. Es mejor ser inclusivo.
+
+PARA RESPUESTAS SOBRE MAGIC:
+- Sé preciso y cita la norma relevante si es posible
+- Si el contexto no tiene suficiente info, sugiere reformular o consultar el PDF
+- Mantén tono cercano y natural en español
+- Al final, agrega "Referencias de las normas oficiales" con secciones usadas
+
+FORMATO DE RESPUESTA:
+- Si usas listas numeradas (1. 2. 3. etc), SIEMPRE agrega una línea en blanco ENTRE cada punto
+- Cada punto debe estar separado visualmente del siguiente
+- Para listas con títulos y explicaciones detalladas, usa este formato:
+
+  1. **Título del punto**
+  Aquí va la explicación detallada de este punto.
+
+  2. **Siguiente título**
+  Aquí va la explicación de este otro punto.
+
+- El título de cada punto debe estar en NEGRITA (**texto**)
+- Siempre hay una línea en blanco después del título antes de la explicación
+- Siempre hay una línea en blanco entre un punto y el siguiente
+
+FORMATO REFERENCIAS:
+Antes de las referencias, agrega una línea separadora con tres guiones: ---
+Luego en la siguiente línea: **Referencias de las normas oficiales:**
+Y después cada referencia en una línea separada:
+- [Título de la sección] (páginas X-Y)
+
+Ejemplo correcto:
+---
+**Referencias de las normas oficiales:**
+- [506. Fase de combate] (página 81)
+- [510. Paso de daño de combate] (página 89)
+
+NO incluyas la sección de referencias si no usaste ninguna norma del contexto."""
+
+    print(f'[RAG] Searching context for: "{query}" (topk={topk})', file=sys.stderr)
     context_chunks = retrieve_context(query, emb_path, meta_path, faiss_index_path, topk=topk)
+    
+    # Print retrieved chunks with scores
+    print(f'\n[RAG] Retrieved chunks with scores:', file=sys.stderr)
+    for i, chunk in enumerate(context_chunks, 1):
+        score = chunk.get('score', 0)
+        title = chunk.get('title', 'No title')
+        pages = f"pages {chunk.get('start_page')}-{chunk.get('end_page')}"
+        print(f'  {i}. [{title}] ({pages}) - Score: {score:.4f}', file=sys.stderr)
+    print(file=sys.stderr)
     
     # Build context string
     context_str = '\n\n'.join([
-        f"[{chunk.get('title', 'Sin título')}] (pages {chunk.get('start_page')}-{chunk.get('end_page')})\n{chunk.get('text', '')}"
+        f"[{chunk.get('title', 'No title')}] (pages {chunk.get('start_page')}-{chunk.get('end_page')})\n{chunk.get('text', '')}"
         for chunk in context_chunks
     ])
     
-    print(f'✓ Encontrado contexto ({len(context_chunks)} chunks)', file=sys.stderr)
-    print(f'📞 Llamando a OpenRouter ({model})...', file=sys.stderr)
+    print(f'[RAG] Calling OpenRouter ({model})...', file=sys.stderr)
     
     answer = call_openrouter(system_prompt, context_str, query, model=model)
     return answer
@@ -172,7 +234,6 @@ def main():
     parser.add_argument('--faiss-index', default='chatbot/faiss.index', help='Path to FAISS index')
     parser.add_argument('--query', help='One-shot query')
     parser.add_argument('--topk', type=int, default=5, help='Number of context chunks')
-    parser.add_argument('--model', default='gpt-4o-mini', help='OpenRouter model (default: gpt-4o-mini)')
     args = parser.parse_args()
 
     # Validate files
@@ -183,7 +244,7 @@ def main():
 
     if args.query:
         # One-shot
-        answer = rag_pipeline(args.query, args.emb, args.meta, args.faiss_index, topk=args.topk, model=args.model)
+        answer = rag_pipeline(args.query, args.emb, args.meta, args.faiss_index, topk=args.topk, model='gpt-4o-mini')
         print('\n' + '='*60)
         print(answer)
         print('='*60)
@@ -194,16 +255,16 @@ def main():
     print('Enter an empty line to exit.\n')
     while True:
         try:
-            q = input('👤 Pregunta: ').strip()
+            q = input('[USER] Question: ').strip()
         except (EOFError, KeyboardInterrupt):
-            print('\n👋 Hasta luego!')
+            print('\n[BOT] Goodbye!')
             break
         if not q:
-            print('👋 Hasta luego!')
+            print('[BOT] Goodbye!')
             break
 
-        answer = rag_pipeline(q, args.emb, args.meta, args.faiss_index, topk=args.topk, model=args.model)
-        print('\n🤖 Respuesta:')
+        answer = rag_pipeline(q, args.emb, args.meta, args.faiss_index, topk=args.topk, model='gpt-4o-mini')
+        print('\n[BOT] Response:')
         print(answer)
         print()
 
