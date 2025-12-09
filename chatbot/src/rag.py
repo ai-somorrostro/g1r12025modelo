@@ -1,4 +1,4 @@
-"""RAG system: retrieve context from FAISS, build prompt, call OpenRouter LLM, return answer.
+r"""RAG system: retrieve context from FAISS, build prompt, call OpenRouter LLM, return answer.
 
 Usage (one-shot):
   .venv\Scripts\python.exe chatbot/rag.py --query "¿Qué es girar?" --topk 5
@@ -17,13 +17,6 @@ from pathlib import Path
 import numpy as np
 import sys
 from typing import List, Dict
-
-# Load env variables
-try:
-    from dotenv import load_dotenv
-    load_dotenv(Path(__file__).parent / '.env')
-except ImportError:
-    pass
 
 
 def load_metadata(meta_path: str) -> List[Dict]:
@@ -91,24 +84,11 @@ def retrieve_context(query: str, emb_path: str, meta_path: str, faiss_index_path
 
 def call_openrouter(system_prompt: str, context: str, user_query: str, model: str = 'gpt-4o-mini') -> str:
     """Call OpenRouter LLM with system prompt + context + user query."""
-    # Try to load from .env if not already set
+    # The .env should already be loaded by the caller (api.py or main())
     api_key = os.getenv('OPENROUTER_API_KEY')
     
     if not api_key:
-        try:
-            env_path = Path(__file__).parent / '.env'
-            if env_path.exists():
-                with open(env_path, 'r', encoding='utf-8') as f:
-                    for line in f:
-                        line = line.strip()
-                        if line.startswith('OPENROUTER_API_KEY='):
-                            api_key = line.split('=', 1)[1].strip()
-                            break
-        except Exception as e:
-            pass
-    
-    if not api_key:
-        raise ValueError('OPENROUTER_API_KEY not set in environment or .env file')
+        raise ValueError('OPENROUTER_API_KEY not set in environment. Make sure .env is loaded.')
 
     try:
         import requests
@@ -172,6 +152,20 @@ Si el contexto no proporciona la información necesaria, indica que no está dis
 
 
 def main():
+    # Load .env when running as main script (direct terminal execution)
+    from dotenv import load_dotenv
+    
+    # Try config/.env first, then root .env
+    env_path = Path(__file__).parent.parent / 'config' / '.env'
+    if not env_path.exists():
+        env_path = Path(__file__).parent.parent / '.env'
+    
+    if env_path.exists():
+        load_dotenv(env_path, override=True)
+        print(f"[RAG] Loaded .env from: {env_path}", file=sys.stderr)
+    else:
+        print(f"[RAG] WARNING: .env file not found", file=sys.stderr)
+    
     parser = argparse.ArgumentParser(description='RAG chatbot for Magic: The Gathering rules')
     parser.add_argument('--emb', default='chatbot/embeddings.npy', help='Path to embeddings.npy')
     parser.add_argument('--meta', default='chatbot/metadata.jsonl', help='Path to metadata.jsonl')
