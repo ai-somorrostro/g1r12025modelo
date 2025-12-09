@@ -5,5 +5,3 @@ faiss-cpu
 tqdm
 numpy
 requests
-fastapi
-uvicorn

@@ -1,207 +1,74 @@
-# Magic: The Gathering RAG Chatbot
+# Ingestión de normas (chatbot)
 
-Un sistema completo de **Retrieval-Augmented Generation (RAG)** para consultar las reglas de Magic: The Gathering. Incluye CLI interactivo y API REST con FastAPI.
+Este directorio contiene utilidades para extraer y chunkear el PDF de normas (`magic_rules.pdf`) en `jsonl` listo para generar embeddings y alimentar un retriever.
 
-## 🚀 Características
+Requisitos:
 
-- **Extracción inteligente de chunks** desde PDF de normas
-- **Embeddings semánticos** usando `sentence-transformers`
-- **Búsqueda rápida** con FAISS
-- **RAG completo**: recupera contexto + LLM (OpenRouter) = respuestas precisas
-- **CLI interactivo** para consultas directas
-- **API REST** con FastAPI + Swagger UI
-
-## 📁 Estructura del Proyecto
-
-```
-chatbot/
-├── src/                    # Scripts de la cadena de procesamiento
-│   ├── chunk_ruler.py     # Extrae chunks del PDF
-│   ├── embed_chunks.py    # Genera embeddings
-│   ├── build_faiss.py     # Crea índice FAISS
-│   ├── cli_search.py      # Búsqueda CLI pura (sin LLM)
-│   └── rag.py             # RAG completo (retrieval + LLM)
-├── data/                   # Artefactos generados
-│   ├── pdf/               # PDFs fuente
-│   ├── chunks_normas.jsonl
-│   ├── embeddings.npy
-│   ├── metadata.jsonl
-│   └── faiss.index
-├── config/                 # Configuración
-│   └── .env               # Variables de entorno (API keys)
-├── docs/                   # Documentación adicional
-├── api.py                 # Servidor FastAPI
-├── requirements.txt       # Dependencias Python
-└── .gitignore            # Exclusiones para git
-```
-
-## 🛠️ Configuración Inicial
-
-### 1. Crear el entorno virtual
+- Python 3.10+
+- Instalar dependencias:
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+pip install -r chatbot/requirements.txt
 ```
 
-### 2. Instalar dependencias
+Uso:
 
 ```powershell
-pip install -r requirements.txt
+python chatbot/chunk_ruler.py --input chatbot/magic-rules/magic_rules.pdf --output chatbot/chunks_normas.jsonl
 ```
 
-### 3. Configurar variables de entorno
+Salida:
 
-Crea `config/.env` con tu API key de OpenRouter:
+- `chatbot/chunks_normas.jsonl`: un JSONL con un chunk por encabezado detectado. Cada línea tiene:
+  - `id`: identificador del chunk
+  - `title`: título o encabezado detectado
+  - `text`: contenido del chunk
+  - `start_page`, `end_page`: páginas de origen
+  - `source`: ruta al PDF
 
-```env
-OPENROUTER_API_KEY=sk-or-v1-xxxxxxxxxxxxxxxx
-```
+Notas y siguientes pasos:
 
-## 🔄 Pipeline: Cómo Funciona
+- El chunking es heurístico (numeración, 'Artículo', líneas en mayúsculas). Se puede ajustar para mejorar la granularidad.
+- En el futuro se añadirá un paso que calcule embeddings (OpenRouter/OpenAI/sentence-transformers) y persista en una vector DB (FAISS/Chroma/Pinecone).
+- Si quieres, ejecuto el script ahora y te muestro los primeros 10 chunks.
 
-### Fase 1: Preparación de datos (una sola vez)
+Embeddings
+
+- Instalación de dependencias (recomendado):
 
 ```powershell
-# 1. Extraer chunks del PDF
-python src/chunk_ruler.py --input "data/pdf/magic_rules.pdf" --output "data/chunks_normas.jsonl"
-
-# 2. Generar embeddings
-python src/embed_chunks.py --input "data/chunks_normas.jsonl" --out-dir "data"
-
-# 3. Construir índice FAISS
-python src/build_faiss.py --emb "data/embeddings.npy" --output "data/faiss.index"
+python -m pip install -r chatbot/requirements.txt
 ```
 
-### Fase 2: Usar el RAG
+Nota: `sentence-transformers` requiere `torch`. En Windows puede ser necesario instalar primero la rueda de CPU de PyTorch (ver https://pytorch.org/get-started/locally/).
 
-#### Opción A: CLI interactivo
+- Dry-run (valida que `chatbot/chunks_normas.jsonl` existe sin descargar modelos):
 
 ```powershell
-python src/rag.py --emb "data/embeddings.npy" --meta "data/metadata.jsonl" --faiss-index "data/faiss.index"
+python chatbot/embed_chunks.py --input chatbot/chunks_normas.jsonl --dry-run
 ```
 
-Luego escribe tus preguntas:
-```
-👤 Pregunta: ¿Qué es girar?
-🤖 Respuesta: [Respuesta generada por LLM]
-```
-
-#### Opción B: CLI de una sola pregunta
+- Generar embeddings y guardar metadatos (crea `chatbot/embeddings.npy` y `chatbot/metadata.jsonl`):
 
 ```powershell
-python src/rag.py --emb "data/embeddings.npy" --meta "data/metadata.jsonl" --faiss-index "data/faiss.index" --query "¿Qué es girar?"
+python chatbot/embed_chunks.py --input chatbot/chunks_normas.jsonl --out-dir chatbot --batch-size 64
 ```
 
-#### Opción C: API REST
+- Opcional: crear un índice FAISS (requiere `faiss-cpu`):
 
 ```powershell
-# Iniciar servidor
-python api.py
-# Navega a http://localhost:8001/docs para Swagger UI
+python -m pip install faiss-cpu
+python chatbot/embed_chunks.py --input chatbot/chunks_normas.jsonl --out-dir chatbot
 ```
 
-Test con PowerShell:
-```powershell
-$body = '{"query":"¿Qué es girar?","topk":3,"model":"gpt-4o-mini"}' 
-Invoke-RestMethod -Uri "http://localhost:8001/query" -Method POST -ContentType "application/json" -Body $body
-```
+ Recomendación de almacenamiento:
 
-O con Python:
-```python
-import requests
-r = requests.post('http://localhost:8001/query', 
-    json={'query': '¿Qué es girar?', 'topk': 3, 'model': 'gpt-4o-mini'})
-print(r.json()['answer'])
-```
+ - Guardar `embeddings.npy` (NumPy float32) y `metadata.jsonl` (uno JSON por línea) es la forma recomendada:
 
-## 📡 Endpoints de la API
+ ```powershell
+ python chatbot/embed_chunks.py --input chatbot/chunks_normas.jsonl --out-dir chatbot --batch-size 64
+ ```
 
-| Endpoint | Método | Descripción |
-|----------|--------|-------------|
-| `/` | GET | Info del API |
-| `/health` | GET | Health check |
-| `/query` | POST | Hacer pregunta RAG |
-| `/docs` | GET | Swagger UI |
+ - Esto producirá `chatbot/embeddings.npy` y `chatbot/metadata.jsonl`.
 
-### POST /query
-
-**Request:**
-```json
-{
-  "query": "¿Qué es girar?",
-  "topk": 5,
-  "model": "gpt-4o-mini"
-}
-```
-
-**Response:**
-```json
-{
-  "query": "¿Qué es girar?",
-  "answer": "Girar es...",
-  "topk": 5,
-  "model": "gpt-4o-mini"
-}
-```
-
-## 🔑 Configuración Avanzada
-
-### Variables de entorno
-- `OPENROUTER_API_KEY`: Tu API key de OpenRouter (requerido)
-
-### Modelos disponibles en OpenRouter
-- `gpt-4o-mini` (rápido, barato) ⭐ recomendado
-- `gpt-4-turbo` (más potente)
-- `claude-3-opus` (alternativa)
-- Más en https://openrouter.ai/
-
-## 🧪 Testing
-
-Test del API completo:
-```powershell
-python test_api.py
-```
-
-Test de búsqueda simple (sin LLM):
-```powershell
-python src/cli_search.py --emb "data/embeddings.npy" --meta "data/metadata.jsonl" --faiss-index "data/faiss.index"
-```
-
-## 🐛 Troubleshooting
-
-### "OPENROUTER_API_KEY not set"
-- Verifica que `config/.env` existe y tiene la API key correcta
-- Verifica que el archivo NO está en formato UTF-8 con BOM
-
-### API no responde
-- Asegúrate que estás en la carpeta `chatbot/` cuando ejecutas `python api.py`
-- Verifica que el puerto 8001 no está siendo usado por otro proceso
-
-### Embeddings lentos
-- Es normal en la primera ejecución (descarga modelo de ~400MB)
-- Las ejecuciones posteriores son mucho más rápidas (modelo en caché)
-
-## 📝 Notas de Arquitectura
-
-- **`cli_search.py`**: Solo retrieval FAISS, sin LLM. Útil para debug
-- **`rag.py`**: Retrieval + LLM. Respuestas de calidad
-- **`.env` loading**: El API carga `.env` al iniciar. Los scripts CLI lo cargan en `main()`
-- **Paths relativos**: El API debe ejecutarse desde la carpeta `chatbot/`
-
-## 🚀 Próximos Pasos
-
-- Agregar caché de respuestas para preguntas frecuentes
-- Mejorar chunking con semántica (vs. heurísticos)
-- Soportar múltiples PDFs
-- Docker containerization
-- Autenticación API
-- Logging y monitoring
-
-## 📄 Licencia
-
-Este proyecto usa datos públicos de Magic: The Gathering desde Scryfall.
-
----
-
-**Preguntas?** Revisa la documentación en `docs/README.md` o los scripts individuales.
+ - Razones: `npy` es eficiente y permite `mmap` para leer sin cargar todo en memoria; `jsonl` facilita inspeccionar/filtrar metadatos.
