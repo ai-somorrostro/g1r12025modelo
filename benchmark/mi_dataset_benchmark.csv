@@ -1,0 +1,449 @@
+sentence1,sentence2,label
+¿Qué pasa si lanzo un hechizo instantáneo en el turno del oponente?,¿Se pueden jugar instantáneos fuera de mi turno?,5
+¿Cuántas cartas robo al inicio de la partida?,¿Cuál es el tamaño de la mano inicial?,5
+¿Qué ocurre si una criatura tiene dañar primero y otra no?,¿Cómo interactúan las criaturas con dañar primero en combate?,4
+¿Qué pasa si mi criatura tiene indestructible y recibe daño letal?,¿Una criatura indestructible puede morir por daño?,4
+¿Cuántas tierras puedo jugar por turno?,¿Se pueden bajar dos tierras en el mismo turno?,4
+¿Qué ocurre si controlo dos permanentes legendarios con el mismo nombre?,¿Cuál es la regla de las cartas legendarias?,5
+¿Qué pasa si mi oponente no tiene cartas en la biblioteca y debe robar?,¿Cómo funciona la pérdida por deckeo?,5
+¿Qué diferencia hay entre un conjuro y un instantáneo?,¿Cuándo puedo jugar un conjuro?,3
+¿Qué ocurre si una criatura tiene vínculo vital?,¿Cómo funciona el vínculo vital en combate?,4
+¿Qué pasa si lanzo un hechizo con destello?,¿Cuál es la diferencia entre destello y instantáneo?,3
+¿Qué ocurre si una criatura está girada?,¿Una criatura girada puede bloquear?,4
+¿Qué pasa si lanzo un hechizo sin pagar su coste de maná?,¿Cómo funcionan las cartas con coste alternativo?,3
+¿Qué ocurre si mi criatura tiene arrollar y es bloqueada por una criatura pequeña?,¿Cómo funciona la habilidad de arrollar?,4
+¿Qué pasa si controlo dos planeswalkers distintos?,¿Puedo tener más de un planeswalker en juego?,5
+¿Qué ocurre si un hechizo es contrarrestado?,¿Qué pasa con las cartas cuando son contrarrestadas?,4
+"¿Si intento lanzar un hechizo y lo contrarestan, cuenta como si lo hubiese lanzado?","¿Si me contrarestan un hechizo, qué pasa con el mana gastado?",3
+¿Cuántas subfases puede haber en la fase de combate?,¿La habilidad doble golpe genera subfases en la fase de combate?,3
+¿Puedo jugar una tierra durante el turno de mi oponente?,¿Se pueden bajar tierras fuera de mi turno?,4
+¿Qué ocurre si mi criatura tiene dañar primero y arrollar?,¿Cómo interactúan dañar primero y arrollar en combate?,4
+¿Se pueden regenerar criaturas indestructibles?,¿Las criaturas indestructibles pueden ser regeneradas?,5
+¿Cuántas cartas robo al inicio de una partida de Commander?,¿Cuál es el tamaño de la mano inicial en Commander?,5
+¿Puedo atacar a un planeswalker directamente?,¿Los planeswalkers pueden ser atacados como jugadores?,5
+¿Qué pasa si lanzo un hechizo con destello en mi turno?,¿En qué se diferencia destello de un instantáneo?,3
+¿Una criatura girada puede usar habilidades activadas?,¿Una criatura girada puede activar habilidades?,4
+¿Qué ocurre si mi oponente controla dos permanentes legendarios iguales?,¿Cuál es la regla de las cartas legendarias?,5
+¿Puedo bloquear con varias criaturas a una sola atacante?,¿Se puede asignar varios bloqueadores a una criatura?,5
+¿Qué pasa si mi criatura tiene toque mortal y arrollar?,¿Cómo funciona la combinación de toque mortal y arrollar?,5
+¿Se pueden jugar dos tierras en el mismo turno?,¿Se pueden bajar dos tierras en el mismo turno?,5
+¿Qué ocurre si un hechizo es contrarrestado?,¿Qué pasa con las cartas cuando son contrarrestadas?,4
+¿Puedo lanzar un conjuro en el turno del oponente?,¿Los conjuros se pueden jugar fuera de mi turno?,4
+¿Qué pasa si mi criatura tiene vínculo vital y hace daño?,¿Cómo funciona el vínculo vital en combate?,4
+¿Se pueden controlar dos planeswalkers distintos a la vez?,¿Puedo tener más de un planeswalker en juego?,4
+¿Qué ocurre si mi oponente no tiene cartas en la biblioteca y debe robar?,¿Cómo funciona la pérdida por deckeo?,5
+¿Puedo lanzar un hechizo sin pagar su coste de maná?,¿Cómo funcionan las cartas con coste alternativo?,3
+¿Qué pasa si mi criatura está girada y quiero atacar?,¿Una criatura girada puede atacar?,4
+¿Se pueden jugar instantáneos en la fase de ataque?,¿Se pueden jugar instantáneos en la fase de combate?,4
+¿Qué ocurre si una criatura tiene protección contra un color?,¿Cómo funciona la protección contra colores?,4
+¿Puedo usar habilidades de un artefacto girado?,¿Los artefactos girados pueden usar habilidades?,4
+¿Qué pasa si mi criatura tiene indestructible y recibe daño letal?,¿Una criatura indestructible puede morir por daño?,4
+¿Se pueden jugar cartas de la mano del oponente?,¿Se pueden jugar cartas de la mano del rival?,5
+¿Qué ocurre si controlo dos encantamientos con el mismo nombre?,¿Los encantamientos legendarios siguen la misma regla?,3
+¿Puedo lanzar un hechizo con destello como si fuera un instantáneo?,¿Destello permite jugar cartas como instantáneos?,5
+¿Qué pasa si mi criatura tiene prisa?,¿Las criaturas con prisa pueden atacar al entrar?,4
+¿Se pueden jugar cartas exiliadas?,¿Se pueden jugar cartas exiliadas?,5
+¿Qué ocurre si mi criatura es destruida pero tiene regeneración?,¿Cómo funciona la regeneración de criaturas destruidas?,4
+¿Puedo atacar en el primer turno si mi criatura tiene prisa?,¿Las criaturas con prisa pueden atacar en el primer turno?,5
+¿Qué pasa si lanzo un hechizo con coste alternativo?,¿Cómo funcionan los costes alternativos en hechizos?,3
+¿Puedo lanzar instantaneos despues de la fase de asignar defensores?,¿Como funciona el cementerio?,0
+¿Que se tiene en cuenta para la identidad de un comandante?,¿Es ilegal ponerse desde fuera del juego otras cartas?,0
+¿Cuantas cartas necesita un mazo para ser valido en commander?,¿Cuenta el comandante dentro del limite de cartas para el formato Commander?,3
+¿Puedo lanzar un instantáneo en el turno del oponente?,¿Es posible jugar un conjuro en el turno rival?,2
+¿Qué pasa si una criatura tiene dañar primero y arrollar?,¿Cómo interactúan dañar primero y arrollar en combate?,5
+¿Se puede regenerar una criatura destruida por “exiliar”?,¿La habilidad de regenerar funciona contra efectos de exilio?,4
+¿Cuántas cartas robo al inicio de la partida?,¿Cuál es el tamaño de la mano inicial en Magic?,5
+¿Los Planeswalkers pueden atacar como criaturas?,¿Es posible declarar un Planeswalker como atacante?,4
+¿Se puede responder a una habilidad activada con un instantáneo?,¿Las habilidades activadas entran en la pila y pueden ser respondidas?,5
+¿Una criatura girada puede bloquear?,¿Las criaturas giradas pueden ser declaradas bloqueadoras?,5
+¿El maná incoloro cuenta como color?,¿El maná incoloro se considera un tipo de color?,5
+¿Se puede jugar más de una tierra por turno?,¿Es posible bajar dos tierras en el mismo turno?,5
+¿Las fichas van al cementerio cuando mueren?,¿Las fichas se consideran permanentes que pueden ir al cementerio?,4
+¿Un encantamiento global afecta a todas las criaturas?,¿Los encantamientos de aura solo afectan a una criatura?,2
+¿Se puede lanzar un hechizo sin pagar su coste?,¿Existen efectos que permiten jugar cartas gratis?,4
+¿El daño de una criatura se mantiene entre fases?,¿El daño marcado en criaturas persiste hasta el final del turno?,5
+¿Los Planeswalkers tienen puntos de vida?,¿Los Planeswalkers usan lealtad en lugar de vida?,4
+¿Se puede contrarrestar una habilidad activada?,¿Las habilidades activadas pueden ser anuladas con “Counterspell”?,3
+¿Las criaturas con prisa pueden atacar el mismo turno que entran?,¿La habilidad de prisa permite atacar inmediatamente?,5
+¿Se puede usar maná negro para pagar un coste azul?,¿El maná de un color puede sustituir otro color?,4
+¿Los hechizos de criatura se consideran permanentes?,¿Las criaturas al resolverse se convierten en permanentes?,5
+¿Una criatura con indestructible puede ser destruida por daño letal?,¿El indestructible evita que una criatura muera por daño?,5
+¿Se puede atacar directamente a un Planeswalker?,¿Los Planeswalkers pueden ser atacados en combate?,5
+¿Las cartas exiliadas vuelven al juego automáticamente?,¿El exilio es una zona permanente fuera del juego?,4
+¿Una criatura con toque mortal destruye cualquier criatura que dañe?,¿El toque mortal mata aunque haga solo 1 de daño?,5
+¿Se puede jugar un hechizo durante la fase de limpieza?,¿Es posible lanzar instantáneos en la fase final?,4
+¿Las habilidades disparadas entran en la pila?,¿Los efectos disparados pueden ser respondidos?,5
+¿Una criatura con vigilancia se gira al atacar?,¿La vigilancia evita que se giren las criaturas al atacar?,5
+¿El maná flotante desaparece al cambiar de fase?,¿El maná sin usar se vacía al final de cada paso y fase?,5
+¿Se puede bloquear con varias criaturas a una sola atacante?,¿Es posible asignar múltiples bloqueadores a un atacante?,5
+¿Los hechizos de aura pueden encantar permanentes del oponente?,¿Una aura puede anexarse a una criatura rival?,4
+¿Las cartas en el cementerio cuentan como permanentes?,¿El cementerio es una zona de juego con permanentes?,4
+¿Se puede lanzar un conjuro en el turno del rival?,¿Los conjuros solo pueden jugarse en tu propio turno?,4
+¿Una criatura con protección contra rojo puede ser bloqueada por criaturas rojas?,¿La protección contra un color evita ser bloqueado por ese color?,5
+¿Los Planeswalkers pueden ser objetivo de hechizos de daño directo?,¿Es posible redirigir daño de jugador a Planeswalker?,4
+¿Se puede usar maná de artefactos para lanzar hechizos?,¿Los artefactos que generan maná funcionan como tierras?,4
+¿Las cartas de tierra cuentan como hechizos?,¿Las tierras se consideran permanentes pero no hechizos?,5
+¿Una criatura con arrollar asigna daño al jugador si es bloqueada?,¿El arrollar permite pasar daño al jugador tras bloquear?,5
+¿Se puede jugar una carta boca abajo sin metamorfosis?,¿Las cartas boca abajo requieren la habilidad de metamorfosis?,5
+¿Los encantamientos permanecen en el campo tras resolverse?,¿Los encantamientos son permanentes en el campo de batalla?,5
+¿Una criatura con vínculo vital hace ganar vida al controlador?,¿El vínculo vital otorga vida igual al daño infligido?,5
+¿Se puede lanzar un hechizo si no hay objetivos válidos?,¿Los hechizos requieren objetivos legales para ser jugados?,5
+¿Las cartas exiliadas pueden regresar con efectos específicos?,¿Existen cartas que devuelven permanentes desde el exilio?,5
+¿Una criatura con antimaleficio puede ser objetivo de tu propio hechizo?,¿El antimaleficio impide que incluso su controlador la apunte?,5
+¿Se puede jugar una tierra girada?,¿Las tierras entran giradas solo si un efecto lo indica?,4
+¿Los Planeswalkers pueden bloquear criaturas atacantes?,¿Es posible declarar un Planeswalker como bloqueador?,5
+¿Una criatura con prisa puede activar habilidades de girar?,¿La prisa permite usar habilidades de girar inmediatamente?,5
+¿Se puede lanzar un instantáneo en la fase de ataque?,¿Los instantáneos pueden jugarse en cualquier fase del turno?,4
+¿Las cartas en la mano cuentan como permanentes?,¿Las cartas en la mano forman parte del campo de batalla?,3
+¿Una criatura con indestructible puede ser sacrificada?,¿El indestructible evita que una criatura sea sacrificada?,3
+¿Se puede jugar una carta desde el cementerio?,¿Existen efectos que permiten lanzar cartas desde el cementerio?,4
+¿Los artefactos se consideran permanentes?,¿Los artefactos permanecen en el campo tras resolverse?,5
+¿Una criatura con protección contra azul puede ser destruida por un hechizo azul?,¿La protección contra azul evita ser objetivo de hechizos azules?,5
+¿Cuál es la capital de Francia?,¿Cuál es la capital de España?,2
+¿Quién escribió Don Quijote?,¿Quién escribió La Odisea?,1
+¿Cuánto dura un partido de fútbol profesional?,¿Cuánto dura un partido de tenis de Grand Slam?,3
+¿En qué año llegó el hombre a la Luna?,¿En qué año terminó la Segunda Guerra Mundial?,2
+¿Cuál es el río más largo del mundo?,¿Cuál es el río más caudaloso del mundo?,3
+¿Quién pintó La última cena?,¿Quién pintó La Gioconda?,2
+¿Cuántos huesos tiene el cuerpo humano adulto?,¿Cuántos músculos tiene el cuerpo humano?,2
+¿Dónde se originó el jazz?,¿Dónde se originó el flamenco?,1
+¿Qué idioma se habla en Brasil?,¿Qué idioma se habla en Argentina?,2
+¿Cuál es la moneda oficial de Japón?,¿Cuál es la moneda oficial de China?,3
+¿Quién inventó la bombilla eléctrica?,¿Quién inventó el teléfono?,2
+¿Cuál es el océano más grande?,¿Cuál es el mar más grande?,1
+¿Dónde se encuentra la Torre Eiffel?,¿Dónde se encuentra la Estatua de la Libertad?,2
+¿Cuál es el animal terrestre más rápido?,¿Cuál es el animal marino más rápido?,2
+¿Quién fue Albert Einstein?,¿Quién fue Nikola Tesla?,3
+¿Cuál es la montaña más alta del planeta?,¿Cuál es la montaña más alta de Europa?,2
+¿Dónde se celebraron los Juegos Olímpicos de 2008?,¿Dónde se celebraron los Juegos Olímpicos de 2012?,2
+¿Cuál es el continente con más países?,¿Cuál es el continente con menos países?,1
+¿Quién descubrió América?,¿Quién descubrió la penicilina?,2
+¿Cuál es el metal más ligero?,¿Cuál es el metal más pesado?,3
+¿Cuál es el planeta más cercano al Sol?,¿Cuál es el planeta más lejano del Sol?,2
+¿Dónde está el Coliseo?,¿Dónde está la Sagrada Familia?,2
+¿Cuál es el desierto más grande del mundo?,¿Cuál es el desierto más seco del mundo?,3
+¿Quién escribió Hamlet?,¿Quién escribió La Divina Comedia?,2
+¿Cuál es la capital de Canadá?,¿Cuál es la capital de Estados Unidos?,2
+¿Cuántos jugadores tiene un equipo de baloncesto en cancha?,¿Cuántos jugadores tiene un equipo de voleibol en cancha?,3
+¿Dónde se encuentra Machu Picchu?,¿Dónde se encuentra Chichen Itzá?,2
+¿Cuál es el idioma oficial de Egipto?,¿Cuál es el idioma oficial de Marruecos?,2
+¿Quién fue Leonardo da Vinci?,¿Quién fue Miguel Ángel?,3
+¿Cuál es el lago más profundo del mundo?,¿Cuál es el lago más grande de África?,2
+¿Dónde se encuentra el Taj Mahal?,¿Dónde se encuentra Petra?,2
+¿Cuál es el país más poblado del mundo?,¿Cuál es el país más pequeño del mundo?,3
+¿Quién compuso la Novena Sinfonía?,¿Quién compuso Las Cuatro Estaciones?,2
+¿Cuál es la capital de Australia?,¿Cuál es la capital de Nueva Zelanda?,2
+¿Cuál es el continente más frío?,¿Cuál es el continente más lluvioso?,1
+¿Dónde se encuentra la Gran Muralla?,¿Dónde se encuentra el Monte Fuji?,2
+¿Cuál es el océano más pequeño?,¿Cuál es el océano Atlántico?,3
+¿Quién fue Marie Curie?,¿Quién fue Rosalind Franklin?,2
+¿Cuál es el país más grande en extensión?,¿Cuál es el país más pequeño en extensión?,2
+¿Cuál es la capital de Alemania?,¿Cuál es la capital de Suiza?,3
+¿Cuántos días tiene un año bisiesto?,¿Cuántos días tiene un año normal?,2
+¿Dónde se encuentra el Kremlin?,¿Dónde se encuentra la Casa Blanca?,2
+¿Cuál es el volcán más activo del mundo?,¿Cuál es el volcán más alto del mundo?,3
+¿Quién escribió Cien años de soledad?,¿Quién escribió El Principito?,2
+¿Cuál es la capital de Italia?,¿Cuál es la capital de Grecia?,2
+¿Cuál es el continente más cálido?,¿Cuál es el continente más seco?,3
+¿Dónde se encuentra el Big Ben?,¿Dónde se encuentra la Ópera de Sídney?,2
+¿Cuál es el país con más islas?,¿Cuál es el país con más desiertos?,2
+¿Quién fue Isaac Newton?,¿Quién fue Galileo Galilei?,3
+¿Cuál es la capital de México?,¿Cuál es la capital de Colombia?,2
+¿Puedo lanzar un instantáneo en el turno del oponente?,¿Cuál es la capital de Francia?,0
+¿Cuántas cartas robo al inicio de la partida?,¿Quién escribió Don Quijote?,0
+¿Los Planeswalkers pueden atacar como criaturas?,¿Cuánto dura un partido de fútbol profesional?,1
+¿Una criatura girada puede bloquear?,¿En qué año llegó el hombre a la Luna?,0
+¿El maná incoloro cuenta como color?,¿Cuál es el río más largo del mundo?,0
+¿Se puede jugar más de una tierra por turno?,¿Quién pintó La última cena?,1
+¿Las fichas van al cementerio cuando mueren?,¿Cuántos huesos tiene el cuerpo humano adulto?,0
+¿Un encantamiento global afecta a todas las criaturas?,¿Dónde se originó el jazz?,0
+¿Se puede lanzar un hechizo sin pagar su coste?,¿Qué idioma se habla en Brasil?,1
+¿El daño de una criatura se mantiene entre fases?,¿Cuál es la moneda oficial de Japón?,0
+¿Los Planeswalkers tienen puntos de vida?,¿Quién inventó la bombilla eléctrica?,0
+¿Se puede contrarrestar una habilidad activada?,¿Cuál es el océano más grande?,1
+¿Las criaturas con prisa pueden atacar el mismo turno que entran?,¿Dónde se encuentra la Torre Eiffel?,0
+¿Se puede usar maná negro para pagar un coste azul?,¿Cuál es el animal terrestre más rápido?,0
+¿Los hechizos de criatura se consideran permanentes?,¿Quién fue Albert Einstein?,1
+¿Una criatura con indestructible puede ser destruida por daño letal?,¿Cuál es la montaña más alta del planeta?,0
+¿Se puede atacar directamente a un Planeswalker?,¿Dónde se celebraron los Juegos Olímpicos de 2012?,0
+¿Las cartas exiliadas vuelven al juego automáticamente?,¿Cuál es el continente con más países?,1
+¿Una criatura con toque mortal destruye cualquier criatura que dañe?,¿Quién descubrió América?,0
+¿Se puede jugar un hechizo durante la fase de limpieza?,¿Cuál es el metal más ligero?,0
+¿Las habilidades disparadas entran en la pila?,¿Cuál es el planeta más cercano al Sol?,1
+¿Una criatura con vigilancia se gira al atacar?,¿Dónde está el Coliseo?,0
+¿El maná flotante desaparece al cambiar de fase?,¿Cuál es el desierto más grande del mundo?,0
+¿Se puede bloquear con varias criaturas a una sola atacante?,¿Quién escribió Hamlet?,1
+¿Los hechizos de aura pueden encantar permanentes del oponente?,¿Cuál es la capital de Canadá?,0
+¿Las cartas en el cementerio cuentan como permanentes?,¿Cuántos jugadores tiene un equipo de baloncesto en cancha?,0
+¿Se puede lanzar un conjuro en el turno del rival?,¿Dónde se encuentra Machu Picchu?,1
+¿Una criatura con protección contra rojo puede ser bloqueada por criaturas rojas?,¿Cuál es el idioma oficial de Egipto?,0
+¿Los Planeswalkers pueden ser objetivo de hechizos de daño directo?,¿Quién fue Leonardo da Vinci?,0
+¿Se puede usar maná de artefactos para lanzar hechizos?,¿Cuál es el lago más profundo del mundo?,1
+¿Las cartas de tierra cuentan como hechizos?,¿Dónde se encuentra el Taj Mahal?,0
+¿Una criatura con arrollar asigna daño al jugador si es bloqueada?,¿Cuál es el país más poblado del mundo?,0
+¿Se puede jugar una carta boca abajo sin metamorfosis?,¿Quién compuso la Novena Sinfonía?,1
+¿Los encantamientos permanecen en el campo tras resolverse?,¿Cuál es la capital de Australia?,0
+¿Una criatura con vínculo vital hace ganar vida al controlador?,¿Cuál es el continente más frío?,0
+¿Se puede lanzar un hechizo si no hay objetivos válidos?,¿Dónde se encuentra la Gran Muralla?,1
+¿Las cartas exiliadas pueden regresar con efectos específicos?,¿Cuál es el océano más pequeño?,0
+¿Una criatura con antimaleficio puede ser objetivo de tu propio hechizo?,¿Quién fue Marie Curie?,0
+¿Se puede jugar una tierra girada?,¿Cuál es el país más grande en extensión?,1
+¿Los Planeswalkers pueden bloquear criaturas atacantes?,¿Cuál es la capital de Alemania?,0
+¿Una criatura con prisa puede activar habilidades de girar?,¿Cuántos días tiene un año bisiesto?,0
+¿Se puede lanzar un instantáneo en la fase de ataque?,¿Dónde se encuentra el Kremlin?,1
+¿Las cartas en la mano cuentan como permanentes?,¿Cuál es el volcán más activo del mundo?,0
+¿Una criatura con indestructible puede ser sacrificada?,¿Quién escribió Cien años de soledad?,0
+¿Se puede jugar una carta desde el cementerio?,¿Cuál es la capital de Italia?,1
+¿Los artefactos se consideran permanentes?,¿Cuál es el continente más cálido?,0
+¿Una criatura con protección contra azul puede ser destruida por un hechizo azul?,¿Dónde se encuentra el Big Ben?,0
+¿Se puede regenerar una criatura destruida por “exiliar”?,¿Cuál es el país con más islas?,1
+¿Dónde se celebraron los Juegos Olímpicos de 2008?,¿Quién fue Isaac Newton?,0
+¿Qué pasa si lanzo un hechizo instantáneo en el turno del oponente?,¿Se pueden jugar instantáneos fuera de mi turno?,5
+¿Cuántas cartas robo al inicio de la partida?,¿Cuál es el tamaño de la mano inicial?,5
+¿Qué ocurre si una criatura tiene dañar primero y otra no?,¿Cómo interactúan las criaturas con dañar primero en combate?,4
+¿Qué pasa si mi criatura tiene indestructible y recibe daño letal?,¿Una criatura indestructible puede morir por daño?,4
+¿Cuántas tierras puedo jugar por turno?,¿Se pueden bajar dos tierras en el mismo turno?,4
+¿Qué ocurre si controlo dos permanentes legendarios con el mismo nombre?,¿Cuál es la regla de las cartas legendarias?,5
+¿Qué pasa si mi oponente no tiene cartas en la biblioteca y debe robar?,¿Cómo funciona la pérdida por deckeo?,5
+¿Qué diferencia hay entre un conjuro y un instantáneo?,¿Cuándo puedo jugar un conjuro?,3
+¿Qué ocurre si una criatura tiene vínculo vital?,¿Cómo funciona el vínculo vital en combate?,4
+¿Qué pasa si lanzo un hechizo con destello?,¿Cuál es la diferencia entre destello y instantáneo?,3
+¿Qué ocurre si una criatura está girada?,¿Una criatura girada puede bloquear?,4
+¿Qué pasa si lanzo un hechizo sin pagar su coste de maná?,¿Cómo funcionan las cartas con coste alternativo?,3
+¿Qué ocurre si mi criatura tiene arrollar y es bloqueada por una criatura pequeña?,¿Cómo funciona la habilidad de arrollar?,4
+¿Qué pasa si controlo dos planeswalkers distintos?,¿Puedo tener más de un planeswalker en juego?,5
+¿Qué ocurre si un hechizo es contrarrestado?,¿Qué pasa con las cartas cuando son contrarrestadas?,4
+"¿Si intento lanzar un hechizo y lo contrarestan, cuenta como si lo hubiese lanzado?","¿Si me contrarestan un hechizo, qué pasa con el mana gastado?",3
+¿Cuántas subfases puede haber en la fase de combate?,¿La habilidad doble golpe genera subfases en la fase de combate?,3
+¿Puedo jugar una tierra durante el turno de mi oponente?,¿Se pueden bajar tierras fuera de mi turno?,4
+¿Qué ocurre si mi criatura tiene dañar primero y arrollar?,¿Cómo interactúan dañar primero y arrollar en combate?,4
+¿Se pueden regenerar criaturas indestructibles?,¿Las criaturas indestructibles pueden ser regeneradas?,5
+¿Cuántas cartas robo al inicio de una partida de Commander?,¿Cuál es el tamaño de la mano inicial en Commander?,5
+¿Puedo atacar a un planeswalker directamente?,¿Los planeswalkers pueden ser atacados como jugadores?,5
+¿Qué pasa si lanzo un hechizo con destello en mi turno?,¿En qué se diferencia destello de un instantáneo?,3
+¿Una criatura girada puede usar habilidades activadas?,¿Una criatura girada puede activar habilidades?,4
+¿Qué ocurre si mi oponente controla dos permanentes legendarios iguales?,¿Cuál es la regla de las cartas legendarias?,5
+¿Puedo bloquear con varias criaturas a una sola atacante?,¿Se puede asignar varios bloqueadores a una criatura?,5
+¿Qué pasa si mi criatura tiene toque mortal y arrollar?,¿Cómo funciona la combinación de toque mortal y arrollar?,5
+¿Se pueden jugar dos tierras en el mismo turno?,¿Se pueden bajar dos tierras en el mismo turno?,5
+¿Qué ocurre si un hechizo es contrarrestado?,¿Qué pasa con las cartas cuando son contrarrestadas?,4
+¿Puedo lanzar un conjuro en el turno del oponente?,¿Los conjuros se pueden jugar fuera de mi turno?,4
+¿Qué pasa si mi criatura tiene vínculo vital y hace daño?,¿Cómo funciona el vínculo vital en combate?,4
+¿Se pueden controlar dos planeswalkers distintos a la vez?,¿Puedo tener más de un planeswalker en juego?,4
+¿Qué ocurre si mi oponente no tiene cartas en la biblioteca y debe robar?,¿Cómo funciona la pérdida por deckeo?,5
+¿Puedo lanzar un hechizo sin pagar su coste de maná?,¿Cómo funcionan las cartas con coste alternativo?,3
+¿Qué pasa si mi criatura está girada y quiero atacar?,¿Una criatura girada puede atacar?,4
+¿Se pueden jugar instantáneos en la fase de ataque?,¿Se pueden jugar instantáneos en la fase de combate?,4
+¿Qué ocurre si una criatura tiene protección contra un color?,¿Cómo funciona la protección contra colores?,4
+¿Puedo usar habilidades de un artefacto girado?,¿Los artefactos girados pueden usar habilidades?,4
+¿Qué pasa si mi criatura tiene indestructible y recibe daño letal?,¿Una criatura indestructible puede morir por daño?,4
+¿Se pueden jugar cartas de la mano del oponente?,¿Se pueden jugar cartas de la mano del rival?,5
+¿Qué ocurre si controlo dos encantamientos con el mismo nombre?,¿Los encantamientos legendarios siguen la misma regla?,3
+¿Puedo lanzar un hechizo con destello como si fuera un instantáneo?,¿Destello permite jugar cartas como instantáneos?,5
+¿Qué pasa si mi criatura tiene prisa?,¿Las criaturas con prisa pueden atacar al entrar?,4
+¿Se pueden jugar cartas exiliadas?,¿Se pueden jugar cartas exiliadas?,5
+¿Qué ocurre si mi criatura es destruida pero tiene regeneración?,¿Cómo funciona la regeneración de criaturas destruidas?,4
+¿Puedo atacar en el primer turno si mi criatura tiene prisa?,¿Las criaturas con prisa pueden atacar en el primer turno?,5
+¿Qué pasa si lanzo un hechizo con coste alternativo?,¿Cómo funcionan los costes alternativos en hechizos?,3
+¿Puedo lanzar instantaneos despues de la fase de asignar defensores?,¿Como funciona el cementerio?,0
+¿Que se tiene en cuenta para la identidad de un comandante?,¿Es ilegal ponerse desde fuera del juego otras cartas?,0
+¿Cuantas cartas necesita un mazo para ser valido en commander?,¿Cuenta el comandante dentro del limite de cartas para el formato Commander?,3
+¿Puedo lanzar un instantáneo en el turno del oponente?,¿Es posible jugar un conjuro en el turno rival?,2
+¿Qué pasa si una criatura tiene dañar primero y arrollar?,¿Cómo interactúan dañar primero y arrollar en combate?,5
+¿Se puede regenerar una criatura destruida por “exiliar”?,¿La habilidad de regenerar funciona contra efectos de exilio?,4
+¿Cuántas cartas robo al inicio de la partida?,¿Cuál es el tamaño de la mano inicial en Magic?,5
+¿Los Planeswalkers pueden atacar como criaturas?,¿Es posible declarar un Planeswalker como atacante?,4
+¿Se puede responder a una habilidad activada con un instantáneo?,¿Las habilidades activadas entran en la pila y pueden ser respondidas?,5
+¿Una criatura girada puede bloquear?,¿Las criaturas giradas pueden ser declaradas bloqueadoras?,5
+¿El maná incoloro cuenta como color?,¿El maná incoloro se considera un tipo de color?,5
+¿Se puede jugar más de una tierra por turno?,¿Es posible bajar dos tierras en el mismo turno?,5
+¿Las fichas van al cementerio cuando mueren?,¿Las fichas se consideran permanentes que pueden ir al cementerio?,4
+¿Un encantamiento global afecta a todas las criaturas?,¿Los encantamientos de aura solo afectan a una criatura?,2
+¿Se puede lanzar un hechizo sin pagar su coste?,¿Existen efectos que permiten jugar cartas gratis?,4
+¿El daño de una criatura se mantiene entre fases?,¿El daño marcado en criaturas persiste hasta el final del turno?,5
+¿Los Planeswalkers tienen puntos de vida?,¿Los Planeswalkers usan lealtad en lugar de vida?,4
+¿Se puede contrarrestar una habilidad activada?,¿Las habilidades activadas pueden ser anuladas con “Counterspell”?,3
+¿Las criaturas con prisa pueden atacar el mismo turno que entran?,¿La habilidad de prisa permite atacar inmediatamente?,5
+¿Se puede usar maná negro para pagar un coste azul?,¿El maná de un color puede sustituir otro color?,4
+¿Los hechizos de criatura se consideran permanentes?,¿Las criaturas al resolverse se convierten en permanentes?,5
+¿Una criatura con indestructible puede ser destruida por daño letal?,¿El indestructible evita que una criatura muera por daño?,5
+¿Se puede atacar directamente a un Planeswalker?,¿Los Planeswalkers pueden ser atacados en combate?,5
+¿Las cartas exiliadas vuelven al juego automáticamente?,¿El exilio es una zona permanente fuera del juego?,4
+¿Una criatura con toque mortal destruye cualquier criatura que dañe?,¿El toque mortal mata aunque haga solo 1 de daño?,5
+¿Se puede jugar un hechizo durante la fase de limpieza?,¿Es posible lanzar instantáneos en la fase final?,4
+¿Las habilidades disparadas entran en la pila?,¿Los efectos disparados pueden ser respondidos?,5
+¿Una criatura con vigilancia se gira al atacar?,¿La vigilancia evita que se giren las criaturas al atacar?,5
+¿El maná flotante desaparece al cambiar de fase?,¿El maná sin usar se vacía al final de cada paso y fase?,5
+¿Se puede bloquear con varias criaturas a una sola atacante?,¿Es posible asignar múltiples bloqueadores a un atacante?,5
+¿Los hechizos de aura pueden encantar permanentes del oponente?,¿Una aura puede anexarse a una criatura rival?,4
+¿Las cartas en el cementerio cuentan como permanentes?,¿El cementerio es una zona de juego con permanentes?,4
+¿Se puede lanzar un conjuro en el turno del rival?,¿Los conjuros solo pueden jugarse en tu propio turno?,4
+¿Una criatura con protección contra rojo puede ser bloqueada por criaturas rojas?,¿La protección contra un color evita ser bloqueado por ese color?,5
+¿Los Planeswalkers pueden ser objetivo de hechizos de daño directo?,¿Es posible redirigir daño de jugador a Planeswalker?,4
+¿Se puede usar maná de artefactos para lanzar hechizos?,¿Los artefactos que generan maná funcionan como tierras?,4
+¿Las cartas de tierra cuentan como hechizos?,¿Las tierras se consideran permanentes pero no hechizos?,5
+¿Una criatura con arrollar asigna daño al jugador si es bloqueada?,¿El arrollar permite pasar daño al jugador tras bloquear?,5
+¿Se puede jugar una carta boca abajo sin metamorfosis?,¿Las cartas boca abajo requieren la habilidad de metamorfosis?,5
+¿Los encantamientos permanecen en el campo tras resolverse?,¿Los encantamientos son permanentes en el campo de batalla?,5
+¿Una criatura con vínculo vital hace ganar vida al controlador?,¿El vínculo vital otorga vida igual al daño infligido?,5
+¿Se puede lanzar un hechizo si no hay objetivos válidos?,¿Los hechizos requieren objetivos legales para ser jugados?,5
+¿Las cartas exiliadas pueden regresar con efectos específicos?,¿Existen cartas que devuelven permanentes desde el exilio?,5
+¿Una criatura con antimaleficio puede ser objetivo de tu propio hechizo?,¿El antimaleficio impide que incluso su controlador la apunte?,5
+¿Se puede jugar una tierra girada?,¿Las tierras entran giradas solo si un efecto lo indica?,4
+¿Los Planeswalkers pueden bloquear criaturas atacantes?,¿Es posible declarar un Planeswalker como bloqueador?,5
+¿Una criatura con prisa puede activar habilidades de girar?,¿La prisa permite usar habilidades de girar inmediatamente?,5
+¿Se puede lanzar un instantáneo en la fase de ataque?,¿Los instantáneos pueden jugarse en cualquier fase del turno?,4
+¿Las cartas en la mano cuentan como permanentes?,¿Las cartas en la mano forman parte del campo de batalla?,3
+¿Una criatura con indestructible puede ser sacrificada?,¿El indestructible evita que una criatura sea sacrificada?,3
+¿Se puede jugar una carta desde el cementerio?,¿Existen efectos que permiten lanzar cartas desde el cementerio?,4
+¿Los artefactos se consideran permanentes?,¿Los artefactos permanecen en el campo tras resolverse?,5
+¿Una criatura con protección contra azul puede ser destruida por un hechizo azul?,¿La protección contra azul evita ser objetivo de hechizos azules?,5
+¿Cuál es la capital de Francia?,¿Cuál es la capital de España?,2
+¿Quién escribió Don Quijote?,¿Quién escribió La Odisea?,1
+¿Cuánto dura un partido de fútbol profesional?,¿Cuánto dura un partido de tenis de Grand Slam?,3
+¿En qué año llegó el hombre a la Luna?,¿En qué año terminó la Segunda Guerra Mundial?,2
+¿Cuál es el río más largo del mundo?,¿Cuál es el río más caudaloso del mundo?,3
+¿Quién pintó La última cena?,¿Quién pintó La Gioconda?,2
+¿Cuántos huesos tiene el cuerpo humano adulto?,¿Cuántos músculos tiene el cuerpo humano?,2
+¿Dónde se originó el jazz?,¿Dónde se originó el flamenco?,1
+¿Qué idioma se habla en Brasil?,¿Qué idioma se habla en Argentina?,2
+¿Cuál es la moneda oficial de Japón?,¿Cuál es la moneda oficial de China?,3
+¿Quién inventó la bombilla eléctrica?,¿Quién inventó el teléfono?,2
+¿Cuál es el océano más grande?,¿Cuál es el mar más grande?,1
+¿Dónde se encuentra la Torre Eiffel?,¿Dónde se encuentra la Estatua de la Libertad?,2
+¿Cuál es el animal terrestre más rápido?,¿Cuál es el animal marino más rápido?,2
+¿Quién fue Albert Einstein?,¿Quién fue Nikola Tesla?,3
+¿Cuál es la montaña más alta del planeta?,¿Cuál es la montaña más alta de Europa?,2
+¿Dónde se celebraron los Juegos Olímpicos de 2008?,¿Dónde se celebraron los Juegos Olímpicos de 2012?,2
+¿Cuál es el continente con más países?,¿Cuál es el continente con menos países?,1
+¿Quién descubrió América?,¿Quién descubrió la penicilina?,2
+¿Cuál es el metal más ligero?,¿Cuál es el metal más pesado?,3
+¿Cuál es el planeta más cercano al Sol?,¿Cuál es el planeta más lejano del Sol?,2
+¿Dónde está el Coliseo?,¿Dónde está la Sagrada Familia?,2
+¿Cuál es el desierto más grande del mundo?,¿Cuál es el desierto más seco del mundo?,3
+¿Quién escribió Hamlet?,¿Quién escribió La Divina Comedia?,2
+¿Cuál es la capital de Canadá?,¿Cuál es la capital de Estados Unidos?,2
+¿Cuántos jugadores tiene un equipo de baloncesto en cancha?,¿Cuántos jugadores tiene un equipo de voleibol en cancha?,3
+¿Dónde se encuentra Machu Picchu?,¿Dónde se encuentra Chichen Itzá?,2
+¿Cuál es el idioma oficial de Egipto?,¿Cuál es el idioma oficial de Marruecos?,2
+¿Quién fue Leonardo da Vinci?,¿Quién fue Miguel Ángel?,3
+¿Cuál es el lago más profundo del mundo?,¿Cuál es el lago más grande de África?,2
+¿Dónde se encuentra el Taj Mahal?,¿Dónde se encuentra Petra?,2
+¿Cuál es el país más poblado del mundo?,¿Cuál es el país más pequeño del mundo?,3
+¿Quién compuso la Novena Sinfonía?,¿Quién compuso Las Cuatro Estaciones?,2
+¿Cuál es la capital de Australia?,¿Cuál es la capital de Nueva Zelanda?,2
+¿Cuál es el continente más frío?,¿Cuál es el continente más lluvioso?,1
+¿Dónde se encuentra la Gran Muralla?,¿Dónde se encuentra el Monte Fuji?,2
+¿Cuál es el océano más pequeño?,¿Cuál es el océano Atlántico?,3
+¿Quién fue Marie Curie?,¿Quién fue Rosalind Franklin?,2
+¿Cuál es el país más grande en extensión?,¿Cuál es el país más pequeño en extensión?,2
+¿Cuál es la capital de Alemania?,¿Cuál es la capital de Suiza?,3
+¿Cuántos días tiene un año bisiesto?,¿Cuántos días tiene un año normal?,2
+¿Dónde se encuentra el Kremlin?,¿Dónde se encuentra la Casa Blanca?,2
+¿Cuál es el volcán más activo del mundo?,¿Cuál es el volcán más alto del mundo?,3
+¿Quién escribió Cien años de soledad?,¿Quién escribió El Principito?,2
+¿Cuál es la capital de Italia?,¿Cuál es la capital de Grecia?,2
+¿Cuál es el continente más cálido?,¿Cuál es el continente más seco?,3
+¿Dónde se encuentra el Big Ben?,¿Dónde se encuentra la Ópera de Sídney?,2
+¿Cuál es el país con más islas?,¿Cuál es el país con más desiertos?,2
+¿Quién fue Isaac Newton?,¿Quién fue Galileo Galilei?,3
+¿Cuál es la capital de México?,¿Cuál es la capital de Colombia?,2
+¿Puedo lanzar un instantáneo en el turno del oponente?,¿Cuál es la capital de Francia?,0
+¿Cuántas cartas robo al inicio de la partida?,¿Quién escribió Don Quijote?,0
+¿Los Planeswalkers pueden atacar como criaturas?,¿Cuánto dura un partido de fútbol profesional?,1
+¿Una criatura girada puede bloquear?,¿En qué año llegó el hombre a la Luna?,0
+¿El maná incoloro cuenta como color?,¿Cuál es el río más largo del mundo?,0
+¿Se puede jugar más de una tierra por turno?,¿Quién pintó La última cena?,1
+¿Las fichas van al cementerio cuando mueren?,¿Cuántos huesos tiene el cuerpo humano adulto?,0
+¿Un encantamiento global afecta a todas las criaturas?,¿Dónde se originó el jazz?,0
+¿Se puede lanzar un hechizo sin pagar su coste?,¿Qué idioma se habla en Brasil?,1
+¿El daño de una criatura se mantiene entre fases?,¿Cuál es la moneda oficial de Japón?,0
+¿Los Planeswalkers tienen puntos de vida?,¿Quién inventó la bombilla eléctrica?,0
+¿Se puede contrarrestar una habilidad activada?,¿Cuál es el océano más grande?,1
+¿Las criaturas con prisa pueden atacar el mismo turno que entran?,¿Dónde se encuentra la Torre Eiffel?,0
+¿Se puede usar maná negro para pagar un coste azul?,¿Cuál es el animal terrestre más rápido?,0
+¿Los hechizos de criatura se consideran permanentes?,¿Quién fue Albert Einstein?,1
+¿Una criatura con indestructible puede ser destruida por daño letal?,¿Cuál es la montaña más alta del planeta?,0
+¿Se puede atacar directamente a un Planeswalker?,¿Dónde se celebraron los Juegos Olímpicos de 2012?,0
+¿Las cartas exiliadas vuelven al juego automáticamente?,¿Cuál es el continente con más países?,1
+¿Una criatura con toque mortal destruye cualquier criatura que dañe?,¿Quién descubrió América?,0
+¿Se puede jugar un hechizo durante la fase de limpieza?,¿Cuál es el metal más ligero?,0
+¿Las habilidades disparadas entran en la pila?,¿Cuál es el planeta más cercano al Sol?,1
+¿Una criatura con vigilancia se gira al atacar?,¿Dónde está el Coliseo?,0
+¿El maná flotante desaparece al cambiar de fase?,¿Cuál es el desierto más grande del mundo?,0
+¿Se puede bloquear con varias criaturas a una sola atacante?,¿Quién escribió Hamlet?,1
+¿Los hechizos de aura pueden encantar permanentes del oponente?,¿Cuál es la capital de Canadá?,0
+¿Las cartas en el cementerio cuentan como permanentes?,¿Cuántos jugadores tiene un equipo de baloncesto en cancha?,0
+¿Se puede lanzar un conjuro en el turno del rival?,¿Dónde se encuentra Machu Picchu?,1
+¿Una criatura con protección contra rojo puede ser bloqueada por criaturas rojas?,¿Cuál es el idioma oficial de Egipto?,0
+¿Los Planeswalkers pueden ser objetivo de hechizos de daño directo?,¿Quién fue Leonardo da Vinci?,0
+¿Se puede usar maná de artefactos para lanzar hechizos?,¿Cuál es el lago más profundo del mundo?,1
+¿Las cartas de tierra cuentan como hechizos?,¿Dónde se encuentra el Taj Mahal?,0
+¿Una criatura con arrollar asigna daño al jugador si es bloqueada?,¿Cuál es el país más poblado del mundo?,0
+¿Se puede jugar una carta boca abajo sin metamorfosis?,¿Quién compuso la Novena Sinfonía?,1
+¿Los encantamientos permanecen en el campo tras resolverse?,¿Cuál es la capital de Australia?,0
+¿Una criatura con vínculo vital hace ganar vida al controlador?,¿Cuál es el continente más frío?,0
+¿Se puede lanzar un hechizo si no hay objetivos válidos?,¿Dónde se encuentra la Gran Muralla?,1
+¿Las cartas exiliadas pueden regresar con efectos específicos?,¿Cuál es el océano más pequeño?,0
+¿Una criatura con antimaleficio puede ser objetivo de tu propio hechizo?,¿Quién fue Marie Curie?,0
+¿Se puede jugar una tierra girada?,¿Cuál es el país más grande en extensión?,1
+¿Los Planeswalkers pueden bloquear criaturas atacantes?,¿Cuál es la capital de Alemania?,0
+¿Una criatura con prisa puede activar habilidades de girar?,¿Cuántos días tiene un año bisiesto?,0
+¿Se puede lanzar un instantáneo en la fase de ataque?,¿Dónde se encuentra el Kremlin?,1
+¿Las cartas en la mano cuentan como permanentes?,¿Cuál es el volcán más activo del mundo?,0
+¿Una criatura con indestructible puede ser sacrificada?,¿Quién escribió Cien años de soledad?,0
+¿Se puede jugar una carta desde el cementerio?,¿Cuál es la capital de Italia?,1
+¿Los artefactos se consideran permanentes?,¿Cuál es el continente más cálido?,0
+¿Una criatura con protección contra azul puede ser destruida por un hechizo azul?,¿Dónde se encuentra el Big Ben?,0
+¿Se puede regenerar una criatura destruida por “exiliar”?,¿Cuál es el país con más islas?,1
+¿Dónde se celebraron los Juegos Olímpicos de 2008?,¿Quién fue Isaac Newton?,0
+¿Puedo lanzar un instantáneo durante la fase de ataque?,¿Puedo lanzar un instantáneo en cualquier fase del turno?,3
+¿Las criaturas con prisa pueden bloquear el turno que entran?,¿Las criaturas con prisa pueden atacar cuando entran?,2
+¿El daño marcado en criaturas se limpia al final del turno?,¿Las marcas de daño se retiran durante la fase de limpieza?,3
+¿Los Planeswalkers pueden ser atacados directamente?,¿Los Planeswalkers pueden ser el objetivo de ataques declarados?,3
+¿Una criatura con indestructible puede morir por -X/-X?,¿Los efectos de -X/-X destruyen sin hacer daño?,3
+¿Puedo jugar dos tierras si una carta me lo permite?,¿Una carta como Exploración permite una tierra adicional por turno?,3
+¿El antimaleficio evita que yo encante mi propia criatura?,¿Antimaleficio permite que el controlador la apunte?,2
+¿Arrollar funciona contra criaturas con protección?,¿La protección evita daño y objetivos de ese color?,2
+¿Se puede responder a una habilidad disparada?,¿Las habilidades disparadas entran en la pila y se pueden responder?,3
+¿Las auras vuelven al campo si el permanente encantado regresa?,¿Las auras van al cementerio si el permanente desaparece?,2
+¿Las fichas dejan un registro en el cementerio?,¿Las fichas no son cartas y no permanecen en el cementerio?,2
+¿Puedo girar una criatura para activar su habilidad el turno que entra?,¿Prisa permite usar habilidades que requieren girar?,2
+¿El exilio es diferente de destruir?,¿Exiliar y destruir mandan a zonas diferentes?,2
+¿Vínculo vital funciona con daño no de combate?,¿Vínculo vital gana vida por cualquier daño que controlas?,2
+¿Una criatura girada puede activar habilidades de girar?,¿Una criatura girada no puede activar habilidades de girar?,2
+¿Protección contra azul impide ser objetivo de habilidades azules?,¿Protección contra azul evita ser objetivo de hechizos y habilidades azules?,3
+¿Se puede contrarrestar una habilidad disparada?,¿Las habilidades disparadas no se pueden contrarrestar con “Counterspell”?,2
+¿Las cartas boca abajo tienen color?,¿Las cartas boca abajo son incoloras por defecto?,2
+¿Una criatura con amenaza puede ser bloqueada por una sola criatura?,¿Amenaza requiere dos o más bloqueadores si se puede bloquear?,2
+¿Puedo asignar múltiples bloqueadores a un atacante con dañar primero?,¿El orden de bloqueo afecta asignación de daño con dañar primero?,2
+¿El maná incoloro puede pagar costes genéricos?,¿El maná incoloro paga costes genéricos pero no de color?,3
+¿Se puede pagar un coste adicional con maná de cualquier color?,¿Los costes adicionales se pagan con cualquier maná que coincida?,2
+¿Metamorfosis permite lanzar criaturas como 2/2 por 3?,¿Metamorfosis permite lanzar como 2/2 boca abajo por 3 genéricos?,3
+¿Regenerar evita el sacrificio?,¿Regenerar no reemplaza sacrificios ni exilio?,2
+¿La vigilancia permite atacar sin girarse?,¿Vigilancia evita girarse al atacar?,3
+"¿Las tierras son permanentes pero no hechizos, correcto?",¿Las tierras no son hechizos cuando se juegan?,3
+¿Toque mortal afecta a Planeswalkers?,¿Toque mortal no afecta a Planeswalkers directamente?,2
+¿El daño de combate se asigna en orden de bloqueo?,¿El atacante asigna daño según orden de bloqueadores?,3
+¿Una criatura con volar puede bloquear a una sin volar?,¿Solo criaturas con volar o alcance bloquean voladores?,2
+¿Los Planeswalkers usan contadores de lealtad?,"¿Los Planeswalkers usan contadores de lealtad, no vida?",3
+¿Se puede lanzar un instantáneo en respuesta a declarar bloqueadores?,¿Se puede responder tras declarar bloqueadores con instantáneos?,3
+¿Las habilidades activadas usan la pila?,¿Las habilidades activadas usan la pila igual que los hechizos?,3
+¿El daño no prevenido puede matar criaturas con indestructible?,¿Indestructible no previene efectos que dan -X/-X?,2
+¿Un aura puede encantar un artefacto del oponente?,¿Las auras pueden encantar permanentes del oponente con objetivos legales?,2
+¿Se puede redirigir daño de jugador a Planeswalker?,¿El daño de jugador ya no se redirige automáticamente a Planeswalkers?,1
+¿Una criatura con prisa puede atacar tras cambiar de controlador?,¿Prisa no evita el mareo de invocación al cambiar de controlador?,2
+¿Los efectos de “hasta el final del turno” caducan en limpieza?,¿Los efectos “hasta el final del turno” terminan en limpieza?,2
+¿Una criatura con protección puede ser objetivo de habilidades de equipo?,¿Protección impide equipar si el equipo es de ese color?,2
+¿Arrollar ignora criaturas con 0 de resistencia?,¿Arrollar solo traspasa daño tras asignar letal al bloqueador?,2
+¿Puedo lanzar conjuros en el turno del oponente?,¿Los conjuros solo se lanzan cuando tienes prioridad y en tu turno?,2
+¿La fase principal permite bajar tierras antes o después del combate?,¿Puedes bajar tierra en cualquier fase principal con prioridad?,2
+¿“No puede ser contrarrestado” evita habilidades que lo anulan?,¿Hechizos “no contrarrestables” ignoran efectos que dicen “contrarrestar”?,2
+¿La prioridad alterna entre jugadores tras cada acción?,¿La prioridad cambia tras cada acción en la pila?,2
+¿Un permanente exiliado regresa si el efecto termina?,¿Los exilios temporales devuelven el permanente cuando termina el efecto?,2
+¿Volar y alcance interactúan en bloqueo?,¿Alcance permite bloquear volar; volar no bloquea sin volar/alcance?,2
+¿Los contadores +1/+1 se mantienen al cambiar de zona?,¿Los contadores se pierden al cambiar de zona salvo que el efecto diga lo contrario?,2
+¿Se puede hacer objetivo a un Planeswalker con daño directo?,¿Se pueden hacer objetivo Planeswalkers con hechizos que digan “cualquier objetivo”?,2
+¿El daño marcado persiste entre fases?,¿El daño marcado persiste hasta el final del turno?,3
+¿Una criatura con protección contra rojo puede ser bloqueada por dos criaturas rojas?,¿Protección contra rojo impide ser bloqueada por criaturas rojas?,2
+¿El maná sin usar se vacía al final de cada paso?,¿El maná se vacía al final de cada paso y fase?,3
