@@ -42,14 +42,14 @@ venv.bak/
 *.sublime-workspace
 
 # Data and artifacts (large files)
-*.npy
-*.pkl
-*.index
-faiss.index
-embeddings.npy
-metadata.jsonl
-chunks_normas.jsonl
-data/
+# *.npy
+# *.pkl
+# *.index
+# faiss.index
+# embeddings.npy
+# metadata.jsonl
+# chunks_normas.jsonl
+# data/
 bulk-data/
 copias-seguridad-data/
 
@@ -73,6 +73,7 @@ Thumbs.db
 
 # Project specific
 magic-rules/magic_rules.pdf
+data/pdf/magic_rules.pdf
 scrapper_log_manager.py
 scrapper.cron
 scryfall_scrapper.py
