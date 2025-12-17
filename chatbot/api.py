@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import numpy as np
 import sys
+import subprocess
 
 # MUST load .env FIRST before importing any project modules
 from dotenv import load_dotenv
@@ -74,6 +75,180 @@ def root():
 def health():
     """Health check endpoint."""
     return {"status": "ok"}
+
+
+@app.post("/setup", tags=["Setup"])
+def setup():
+    """
+    Initialize the RAG pipeline step by step using the existing scripts:
+    1. Chunk PDF with chunk_ruler.py
+    2. Generate embeddings with embed_chunks.py
+    3. Build FAISS index with build_faiss.py
+    
+    Returns:
+        - status: Success or error message with details
+    """
+    try:
+        app_dir = Path(__file__).parent
+        data_dir = app_dir / 'data'
+        pdf_dir = data_dir / 'pdf'
+        
+        # Create directories
+        data_dir.mkdir(exist_ok=True)
+        pdf_dir.mkdir(exist_ok=True)
+        
+        chunks_path = data_dir / 'chunks_normas.jsonl'
+        embeddings_path = data_dir / 'embeddings.npy'
+        faiss_index_path = data_dir / 'faiss.index'
+        pdf_path = pdf_dir / 'magic_rules_clean.pdf'
+        
+        steps_completed = []
+        
+        # Step 1: Chunk the PDF
+        print("[SETUP] Step 1: Chunking PDF...")
+        if not chunks_path.exists():
+            if not pdf_path.exists():
+                raise HTTPException(
+                    status_code=400,
+                    detail=f"PDF file not found: {pdf_path}. Ensure data/pdf/magic_rules_clean.pdf exists."
+                )
+            
+            print(f"  → Running: python src/chunk_ruler.py --input {pdf_path} --output {chunks_path} --definitions-start 275")
+            result = subprocess.run(
+                [
+                    "python",
+                    str(app_dir / "src" / "chunk_ruler.py"),
+                    "--input", str(pdf_path),
+                    "--output", str(chunks_path),
+                    "--definitions-start", "275"
+                ],
+                cwd=str(app_dir),
+                capture_output=True,
+                text=True,
+                timeout=300
+            )
+            
+            if result.returncode != 0:
+                error_msg = f"chunk_ruler.py failed: {result.stderr}"
+                print(f"  ✗ {error_msg}")
+                raise HTTPException(status_code=500, detail=error_msg)
+            
+            print(f"  ✓ Chunks created: {chunks_path}")
+            steps_completed.append(f"Chunked PDF into {chunks_path}")
+        else:
+            print(f"  ✓ Chunks already exist at {chunks_path}")
+            steps_completed.append(f"Chunks already exist: {chunks_path}")
+        
+        # Count chunks
+        with open(chunks_path, 'r') as f:
+            chunk_count = sum(1 for _ in f)
+        print(f"  → Total chunks: {chunk_count}")
+        
+        # Step 2: Generate embeddings
+        print("[SETUP] Step 2: Generating embeddings...")
+        if not embeddings_path.exists():
+            print(f"  → Running: python src/embed_chunks.py --input {chunks_path} --out-dir {data_dir}")
+            result = subprocess.run(
+                [
+                    "python",
+                    str(app_dir / "src" / "embed_chunks.py"),
+                    "--input", str(chunks_path),
+                    "--out-dir", str(data_dir)
+                ],
+                cwd=str(app_dir),
+                capture_output=True,
+                text=True,
+                timeout=600
+            )
+            
+            if result.returncode != 0:
+                error_msg = f"embed_chunks.py failed: {result.stderr}"
+                print(f"  ✗ {error_msg}")
+                raise HTTPException(status_code=500, detail=error_msg)
+            
+            print(f"  ✓ Embeddings created: {embeddings_path}")
+            steps_completed.append(f"Generated embeddings: {embeddings_path}")
+        else:
+            print(f"  ✓ Embeddings already exist at {embeddings_path}")
+            steps_completed.append(f"Embeddings already exist: {embeddings_path}")
+        
+        # Verify embeddings file
+        if embeddings_path.exists():
+            emb_shape = np.load(str(embeddings_path)).shape
+            print(f"  → Embeddings shape: {emb_shape}")
+        else:
+            raise HTTPException(
+                status_code=500,
+                detail=f"Embeddings file was not created: {embeddings_path}"
+            )
+        
+        # Step 3: Build FAISS index
+        print("[SETUP] Step 3: Building FAISS index...")
+        if not faiss_index_path.exists():
+            print(f"  → Running: python src/build_faiss.py --emb {embeddings_path} --output {faiss_index_path}")
+            result = subprocess.run(
+                [
+                    "python",
+                    str(app_dir / "src" / "build_faiss.py"),
+                    "--emb", str(embeddings_path),
+                    "--output", str(faiss_index_path)
+                ],
+                cwd=str(app_dir),
+                capture_output=True,
+                text=True,
+                timeout=300
+            )
+            
+            if result.returncode != 0:
+                error_msg = f"build_faiss.py failed: {result.stderr}"
+                print(f"  ✗ {error_msg}")
+                raise HTTPException(status_code=500, detail=error_msg)
+            
+            print(f"  ✓ FAISS index created: {faiss_index_path}")
+            steps_completed.append(f"Built FAISS index: {faiss_index_path}")
+        else:
+            print(f"  ✓ FAISS index already exists at {faiss_index_path}")
+            steps_completed.append(f"FAISS index already exists: {faiss_index_path}")
+        
+        # Final verification
+        print("[SETUP] Step 4: Verifying all files...")
+        required_files = [chunks_path, embeddings_path, faiss_index_path]
+        missing_files = []
+        for fpath in required_files:
+            if not fpath.exists():
+                missing_files.append(str(fpath))
+            else:
+                print(f"  ✓ {fpath.name} OK ({fpath.stat().st_size} bytes)")
+        
+        if missing_files:
+            raise HTTPException(
+                status_code=500,
+                detail=f"Setup incomplete. Missing files: {missing_files}"
+            )
+        
+        steps_completed.append("All files verified successfully")
+        
+        print("[SETUP] ✓ Setup completed successfully!")
+        return {
+            "status": "success",
+            "message": "RAG pipeline initialized successfully",
+            "steps": steps_completed,
+            "files": {
+                "chunks": str(chunks_path),
+                "embeddings": str(embeddings_path),
+                "faiss_index": str(faiss_index_path)
+            }
+        }
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"[SETUP] ERROR: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Setup failed: {str(e)}")
+
+
 
 
 @app.post("/query", response_model=QueryResponse, tags=["RAG"])
